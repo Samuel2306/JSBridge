@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div>这是首页</div>
+  <!--<a href="./about.html">介绍页面</a>-->
+  <div id="content">H5原先的内容</div>
+  <div><button id="btn">H5用来操作Native的按钮</button></div>
+  <div id="text"></div>
+</body>
+<script src="./WebViewJSBridge.js"></script>
+<script>
+  JSBridge.registerHandler('h5_api', function(params, nativeCallback){
+    document.getElementById("text").innerHTML = params.origin + ":" + params.content
+    // 执行原生的回调函数
+    nativeCallback && nativeCallback({
+      handlerName: 'changeContent',  // 定义在Native里面的方法
+      data: { //传给native回调函数的数据
+        "origin":"H5",
+        "content":"那你改吧"
+      }
+    })
+  })
+  document.getElementById("btn").onclick = function(){
+    JSBridge.callHandler("testNativeFunc", {"origin": "H5", "content": "这是H5想要显示在原生里面的内容"}, function(msg){
+      document.getElementById("text").innerHTML = msg.result.content
+    })
+  }
+</script>
+</html>
