@@ -1,4 +1,4 @@
-package com.nio.imooc;
+package com.samuel.bridge;
 
 import android.app.Activity;
 import android.net.Uri;

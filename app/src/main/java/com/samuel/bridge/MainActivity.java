@@ -1,4 +1,4 @@
-package com.nio.imooc;
+package com.samuel.bridge;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.samuel.bridge.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,17 +1,14 @@
-package com.nio.imooc;
+package com.samuel.bridge;
 
 import android.app.Activity;
-import android.app.TimePickerDialog;
-import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.WebView;
 import android.widget.TextView;
-import android.widget.TimePicker;
+
+import com.samuel.bridge.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Calendar;
 
 /**
  * Created by dailc on 2017/2/19 0019.
@@ -48,7 +45,7 @@ public class BridgeImpl {
                     JSONObject object = new JSONObject();
                     object.put("origin", "native");
                     object.put("content", "请把Native返回的信息在H5页面中展示出来");
-                    callback.apply(JSBridge.getSuccessJSONObject(object));
+                    callback.apply(com.samuel.bridge.JSBridge.getSuccessJSONObject(object));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -68,7 +65,7 @@ public class BridgeImpl {
                     JSONObject object = new JSONObject();
                     object.put("origin", "native");
                     object.put("content", "请把Native返回的信息在H5页面中展示出来");
-                    callback.apply(JSBridge.getSuccessJSONObject(object));
+                    callback.apply(com.samuel.bridge.JSBridge.getSuccessJSONObject(object));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
