@@ -58,18 +58,5 @@ public class BridgeImpl {
         final String content = param.optString("content");
         TextView textView = webLoader.findViewById(R.id.textView);
         textView.setText(origin + "：" + content);
-        wv.post(new Runnable() {
-            public void run() {
-                //做一些自己的操作，操作完毕后将值通过回调回传给h5页面
-                try {
-                    JSONObject object = new JSONObject();
-                    object.put("origin", "native");
-                    object.put("content", "请把Native返回的信息在H5页面中展示出来");
-                    callback.apply(com.samuel.bridge.JSBridge.getSuccessJSONObject(object));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
     }
 }
