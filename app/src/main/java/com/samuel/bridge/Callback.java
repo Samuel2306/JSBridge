@@ -19,6 +19,8 @@ import java.lang.ref.WeakReference;
  */
 
 public class Callback {
+    // Handler这个类就是管理某个线程(也可能是进程)的消百息队列，比如度让Handler处理主线程的消息队列，这样就可以将一些耗时任务放到其他线程之中，
+    // 待任务完成之后就往主线程的消息队问列中添加一个消息，这样Handler的Callback，即handleMessage就会答被调用
     private static Handler mHandler = new Handler(Looper.getMainLooper());
     //和前端约定好的前端接收方式
     private static final String CALLBACK_JS_FORMAT = "javascript:JSBridge._handleMessageFromNative(%s);";
