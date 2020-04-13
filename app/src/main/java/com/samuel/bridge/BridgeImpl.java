@@ -33,11 +33,7 @@ public class BridgeImpl {
      * param1：参数1
      */
     public static void testNativeFunc(final Activity webLoader, WebView wv, JSONObject param, final Callback callback) {
-        Log.d("ss","receivetestNativeFunc~");
-        final String origin = param.optString("origin");
-        final String content = param.optString("content");
-        TextView textView = webLoader.findViewById(R.id.textView);
-        textView.setText(content);
+        BridgeImpl.changeContent(webLoader, wv, param, callback);
         wv.post(new Runnable() {
             public void run() {
                 //做一些自己的操作，操作完毕后将值通过回调回传给h5页面
@@ -53,7 +49,7 @@ public class BridgeImpl {
         });
     }
     public static void changeContent(final Activity webLoader, WebView wv, JSONObject param, final Callback callback) {
-        Log.d("ss","changeContent~");
+        // Log.d("ss","changeContent~");
         final String origin = param.optString("origin");
         final String content = param.optString("content");
         TextView textView = webLoader.findViewById(R.id.textView);

@@ -26,7 +26,8 @@
   })
   document.getElementById("btn").onclick = function(){
     JSBridge.callHandler("testNativeFunc", {"origin": "H5", "content": "这是H5想要显示在原生里面的内容"}, function(msg){
-      document.getElementById("text").innerHTML = msg.result.content
+
+      document.getElementById("text").innerHTML = "native：" + msg.result.content
     })
   }
 </script>
