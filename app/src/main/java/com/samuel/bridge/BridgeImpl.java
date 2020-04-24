@@ -11,8 +11,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by dailc on 2017/2/19 0019.
- *
  * API的定义必须满足以下条件：
  * 1.实现IBridge
  * 2.方法必须是public static类型

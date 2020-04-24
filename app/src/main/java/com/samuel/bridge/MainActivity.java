@@ -45,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
          */
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);//不使用缓存，只从网络获取数据.
 
-        //支持屏幕缩放
-        webSettings.setSupportZoom(true);
-        webSettings.setBuiltInZoomControls(true);
-
-
         //加载url
         webView.loadUrl("file:///android_asset/index.html");
 

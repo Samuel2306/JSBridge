@@ -14,8 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by dailc on 2017/2/19 0019.
- *
+ * 该类的作用是注册API，使用Callback类实例进行H5方法的调用
  *
  */
 

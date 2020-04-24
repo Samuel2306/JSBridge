@@ -12,10 +12,7 @@ import org.json.JSONObject;
 import java.lang.ref.WeakReference;
 
 /**
- * Created by dailc on 2017/2/19 0019.
  *
- * callback类里面是当前正在执行的回调函数
- * 其中本示例只支持同时执行一个函数(因为只存储了一个mPort变量)，具体同时支持多个方法的拓展可自行进行
  */
 
 public class Callback {
